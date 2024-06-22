@@ -18,6 +18,7 @@ public class CasinoUB {
         BlackJack blackJack = new BlackJack();
         Ruleta ruleta = new Ruleta();
         PeleaDeGallos peleaDeGallos = new PeleaDeGallos("Ramiro", "Clementino");
+        TorreDeHanoi torreDeHanoi = new TorreDeHanoi();
         Trabajo trabajo = new Trabajo();
         Crimen crimen = new Crimen();
         Tienda tienda = new Tienda();
@@ -66,6 +67,7 @@ public class CasinoUB {
                         System.out.println("1. /BlackJack");
                         System.out.println("2. /Roulette");
                         System.out.println("3. /Pelea de Gallos");
+                        System.out.println("4. /Torre de Hanoi");
                         System.out.print("/");
                         int opcionJuegos = euceda.nextInt();
                         switch (opcionJuegos) {
@@ -80,6 +82,9 @@ public class CasinoUB {
                                 break;
                             case 3:
                                 peleaDeGallos.ejecutar(economia);
+                                break;
+                            case 4:
+                                torreDeHanoi.jugar();
                                 break;
                             default:
                                 System.out.println("Opción no válida.");
